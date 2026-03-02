@@ -304,4 +304,65 @@ body {
 /* Indicador de que la foto se puede ampliar */
 .photo-wrapper img {
     cursor: zoom-in;
+
+}
+/* --- ADAPTACIÓN PARA CELULARES (RESPONSIVE) --- */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .message-area {
+        padding: 25px 15px; /* Reducimos el relleno para dar más espacio al texto */
+        max-height: 85vh; /* Evita que la tarjeta sea más alta que la pantalla */
+        overflow-y: auto; /* Agrega scroll si el texto o las fotos son muy largos */
+        box-sizing: border-box;
+    }
+
+    /* Achicamos la ilustración del pastel */
+    .main-illustration {
+        width: 90px;
+        margin-bottom: 5px;
+    }
+
+    /* Reducimos el tamaño de la letra para que no se amontone */
+    .main-title {
+        font-size: 1.6rem;
+    }
+
+    .sub-title {
+        font-size: 1.3rem;
+    }
+
+    .body-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* Hacemos las decoraciones más pequeñas y las pegamos más a las esquinas */
+    .decor {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .decor.top-left { top: 10px; left: 10px; }
+    .decor.top-right { top: 10px; right: 10px; }
+    .decor.bottom-left { bottom: 10px; left: 10px; }
+    .decor.bottom-right { bottom: 10px; right: 10px; }
+
+    /* Achicamos un poco los botones y el collage */
+    .controls {
+        margin-top: 15px;
+    }
+
+    .sketch-button {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+
+    .collage {
+        max-width: 230px;
+        gap: 10px;
+    }
 }
